@@ -221,16 +221,6 @@ function updateGame() {
     ctx.drawImage(bgImage, 0, 0, canvas.width, canvas.height);
     score();
     drawLives(); // Menggambar nyawa
-
-    // Cek apakah segitiga mencapai posisi win
-    if (segitigaObj.x + segitigaObj.size >= canvas.width) {
-        gameOver = true;
-        drawWin();
-        setTimeout(() => {
-            alert("MENANG\nSCORE: " + scoreValue);
-            location.reload();
-        }, 500);
-    }
     segilima();
     segitiga();
     drawBullets();
